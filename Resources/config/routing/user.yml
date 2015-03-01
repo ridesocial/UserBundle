@@ -1,0 +1,15 @@
+ridesocial_user_index:
+    path: /users
+    defaults: { _controller: RideSocialUserBundle:User:index, page: 1 }
+    requirements:
+        page: \d+
+ridesocial_user_edit:
+    path: /users/{slug}/edit
+    defaults: { _controller: RideSocialUserBundle:User:edit }
+ridesocial_user_show:
+    path: /users/{slug}
+    defaults: { _controller: RideSocialUserBundle:User:show }
+ridesocial_user_new:
+    path: /users/new
+    defaults: { _controller: RideSocialUserBundle:User:new }
+    

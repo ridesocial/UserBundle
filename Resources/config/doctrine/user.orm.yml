@@ -1,0 +1,54 @@
+\RideSocial\Bundle\UserBundle\Entity\User:
+    type: entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+        lastName:
+            type: string
+        gender:
+            type: string
+        email:
+            type: string
+        birthdate:
+            type: datetime
+        facebookId:
+            type: string
+            nullable: true
+        googleId:
+            type: string
+            nullable: true
+        linkedinId:
+            type: string
+            nullable: true
+        twitterId:
+            type: string
+            nullable: true
+        foursquareId:
+            type: string
+            nullable: true
+        avatar:
+            type: string
+            nullable: true
+        createdAt:
+            type: date
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: date
+            gedmo:
+                timestampable:
+                    on: update
+        slug:
+            type: string
+            gedmo:
+                slug:
+                    - firstName
+                    - lastName
+            
